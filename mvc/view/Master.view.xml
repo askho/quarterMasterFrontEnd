@@ -1,0 +1,48 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.scout138.quatermaster.mvc.controller.Master" xmlns:l="sap.ui.layout">
+    <Page id="page" title="ZTIME">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button icon="sap-icon://menu2" press="onMenuPress" />
+                </contentLeft>
+                <contentMiddle>
+                    <Label text="ZTIME" />
+                </contentMiddle>
+            </Bar>
+        </customHeader>
+        <subHeader>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Text id="selectedDateFrom" text="All">
+                    <layoutData>
+                        <ToolbarLayoutData shrinkable="true" />
+                    </layoutData>
+                </Text>
+                <Text id="selectedDateTo" text="">
+                    <layoutData>
+                        <ToolbarLayoutData shrinkable="true" />
+                    </layoutData>
+                </Text>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://calendar" press="showCalendar">
+                    <layoutData>
+                        <ToolbarLayoutData shrinkable="false" />
+                    </layoutData>
+                </Button>
+                <Button icon="sap-icon://slim-arrow-down" press="showSettings" />
+            </Toolbar>
+        </subHeader>
+        <content>
+
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Add" icon="sap-icon://add" press="onAddPress" />
+                <ToolbarSpacer />
+                <Button text="Submit" icon="sap-icon://download" />
+                <ToolbarSpacer />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

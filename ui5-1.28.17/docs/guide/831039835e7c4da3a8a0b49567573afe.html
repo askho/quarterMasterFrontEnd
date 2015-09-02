@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+
+
+
+<meta name="abstract" content="All strings for translation have to be annotated to provide more context for translation. An annotation consists of an &#34;X/Y&#34; text type classification, an optional length restriction, and a freetext explanation how the string is used on the UI."/>
+<meta name="description" content="All strings for translation have to be annotated to provide more context for translation. An annotation consists of an &#34;X/Y&#34; text type classification, an optional length restriction, and a freetext explanation how the string is used on the UI."/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css"/>
+<title>Annotations in Translation Files</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+
+  <script src="../../resources/sap/ui/thirdparty/jquery/jquery-1.11.1.js"></script>
+    <script src="../../resources/sap/ui/demokit/js/highlight-query-terms.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../resources/sap/ui/demokit/themes/base/highlight-query-terms.css" />
+    <script src="../../resources/sap/ui/demokit/js/google-code-prettify/run_prettify.js"></script>
+    <script src="../../resources/sap/ui/demokit/js/google-code-prettify/lang-css.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../resources/sap/ui/demokit/js/google-code-prettify/prettify.css" />
+  </head>
+<body class="sap_bluecrystal" id="loio831039835e7c4da3a8a0b49567573afe">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Annotations in Translation Files</h1>
+<div class="body"><p class="shortdesc">All strings for translation have to be annotated to provide more context for
+		translation. An annotation consists of an "X/Y" text type classification, an optional length
+		restriction, and a freetext explanation how the string is used on the UI.</p>
+<p class="p">The following comment types exist:</p>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint "><samp class="ph codeph">#!properties</samp>
+<samp class="ph codeph">#&lt;SAP-Text-Type&gt;</samp>
+<samp class="ph codeph">#&lt;SAP-Text-Type&gt;:&lt;Note for translator&gt;</samp>
+<samp class="ph codeph">#&lt;SAP-Text-Type&gt;,&lt;Length-Restriction&gt;</samp>
+<samp class="ph codeph">#&lt;SAP-Text-Type&gt;,&lt;Length-Restriction&gt;:&lt;Note for translator&gt;</samp>
+</pre></div>
+<div class="section"><div class="section_title">Text Classification</div><div type="Text Classification">
+			
+			<p class="p">The following text type classifications exist:</p>
+
+			<ul class="ul" id="loio831039835e7c4da3a8a0b49567573afe__ul_n41_nmp_np"><li class="li">
+					<p class="p">X texts are used for all texts with less than 120 characters (short
+						texts)</p>
+
+				</li>
+<li class="li">
+					<p class="p">Y texts are used for texts with more than 120 characters</p>
+
+					<div class="note note"><span class="notetitle">Note</span> Use only the Y text types specified in the table below. More Y text types
+						exist but must not be used.</div>
+
+				</li>
+<li class="li">
+					<p class="p"><samp class="ph codeph">NOTR</samp> is used for strings that are not relevant for
+						translation</p>
+
+				</li>
+</ul>
+
+			
+<div class="tablenoborder"><table summary="" id="loio831039835e7c4da3a8a0b49567573afe__table_wht_wmp_np" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1:
+					X Text Types</span></caption>
+<colgroup><col width="33.003300330033%"/><col width="33.66336633663366%"/><col width="33.33333333333333%"/></colgroup>
+<thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="33.003300330033%" id="d905089e69">Text type</th>
+<th class="entry" valign="top" width="33.66336633663366%" id="d905089e71">Related S2X type</th>
+<th class="entry" valign="top" width="33.33333333333333%" id="d905089e73">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XACT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">accessibility</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Accessibility</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XALT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">alternativetext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Alternative text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XBCB</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">breadcrumbstep</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Breadcrumb step</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XBLI</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">listitem</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Bullet list item text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XBUT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">button</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Button text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XCAP</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">caption</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Caption</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XCEL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">cell</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Cell</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XCKL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">checkbox</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Checkbox</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XCOL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">tableColumnHeading</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Column header</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XCRD</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">tabStrip</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Tabstrip</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XDAT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">datanavigationtext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Data navigation text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XFLD</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">label</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Label</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XFRM</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">frame</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Frame</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XGLS</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">term</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Term</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XGRP</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">grouptitle</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Group title</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XHED</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">heading</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Heading</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XLGD</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">legendtext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Legend text </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XLNK</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">hyperlink</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Hyperlink text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XLOG</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">logentry</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Log entry</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XLST</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">listbox</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">List box item</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XMEN</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">menu</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Menu header</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XMIT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">menuitem</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Menu item</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XMSG</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">messagetext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Message text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XRBL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">radio</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Radio button</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XRMP</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">roadMapStep</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Roadmap step</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XROW</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">tableRowHeading</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Table row heading</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XSEL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">selectiontext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Selection text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XTBS</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">tab</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Tab strip text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XTIT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">tableTitle</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Table title</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XTND</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">treeNode</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Tree node text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XTOL</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">quickInfo</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">Quick info text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.003300330033%" headers="d905089e69 "><samp class="ph codeph">XTXT</samp></td>
+<td class="entry" valign="top" width="33.66336633663366%" headers="d905089e71 ">generaltext</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e73 ">General text</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+			
+<div class="tablenoborder"><table summary="" id="loio831039835e7c4da3a8a0b49567573afe__table_fmz_fnp_np" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2:
+					Y Text Types</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+<thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="33.33333333333333%" id="d905089e344">Text type</th>
+<th class="entry" valign="top" width="33.33333333333333%" id="d905089e346">Related S2X type</th>
+<th class="entry" valign="top" width="33.33333333333333%" id="d905089e348">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YACT</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">accessibilitylong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Accessibility (long) </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YBLI</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">list</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Bullet list item text </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YDEF</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">definition</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Definition </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YDES</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">description</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Description</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YEXP</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">explanation</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Explanation </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YFAA</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">faqa</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">FAQ answer</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YFAQ</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">faq</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">FAQ</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YGLS</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">glossarydefinition</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Glossary definition</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YINF</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">informationtextlong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Information</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YINS</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">instruction</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Instruction </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YLOG</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">logEntrylong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Log entry</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YMSE</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">errorMessage</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Error message</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YMSG</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">messagetextlong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Message text (long)</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YMSI</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">informationMessage</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Information message long</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YMSW</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">warningMessage</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Warning message</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YTEC</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">technicaltextlong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Technical text</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YTIC</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">ticker</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">Ticker / Marquee</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d905089e344 "><samp class="ph codeph">YTXT</samp></td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e346 ">generaltextlong</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d905089e348 ">General text long</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+		</div></div>
+<div class="example"><h2 class="exampletitle">Example</h2><div class="title authorexampletitle">Properties File</div>
+			
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint "><samp class="ph codeph">#!properties</samp>
+<samp class="ph codeph">#XMSG: a random text used for demonstration purposes, the meaning is not related to any other content in the UI
+HelloWorld=Hello world!</samp>
+
+<samp class="ph codeph">#XBUT,10</samp>
+<samp class="ph codeph">OK=OK</samp>
+
+<samp class="ph codeph">#XBUT,15</samp>
+<samp class="ph codeph">Cancel=Cancel</samp>
+
+<samp class="ph codeph">#XMSG: The user has just triggered an action which cannot be executed</samp>
+<samp class="ph codeph">Unauthorized=User {0} is not authorized to execute command {1}</samp>
+
+<samp class="ph codeph">#XMSG</samp>
+<samp class="ph codeph">Multiline=Line 1\nLine 2</samp>
+
+<samp class="ph codeph">#XFLD: The money you get back at shop's checkout-counter</samp>
+<samp class="ph codeph">Change=Change</samp>
+</pre></div>
+
+		</div>
+</div>
+</div></div>
+
+<SCRIPT LANGUAGE="JavaScript"><!--
+ var page_title="Annotations in Translation Files";
+
+        if (page_title !='' &&
+        parent.document.title != null) {
+ parent.document.title =
+          page_title;
+ } 
+ var
+        anchor = document.getElementById(location.hash.substring(+1)); if (typeof (anchor)
+        !='undefined' && anchor !=null){
+        var top = anchor.getBoundingClientRect().top; } 
+//-->
+</SCRIPT>
+</body>
+</html>
